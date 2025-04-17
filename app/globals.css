@@ -1,26 +1,778 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.color-gris{
+    color: #3B3B3B;
+}
+/** ---------------- ESTILOS SOBRE NOSOTROS --------------**/
+.titulo-nosotros{
+    margin-top: 20px;
+}
+.fancy-border-radius {
+    border-radius: 31% 69% 45% 55% / 55% 39% 61% 45%;
+    width: 400px;
+    height: 400px;
+}
+.trabajadores-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.trabajador {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+.trabajador.left .trabajador-img {
+  order: 1;
+}
+.trabajador.right .trabajador-img {
+  order: 2;
+}
+.trabajador.left .trabajador-info {
+  order: 2;
+  text-align: left;
+}
+.trabajador.right .trabajador-info {
+  order: 1;
+  text-align: left;
+}
+.trabajador-info a{
+  text-align: right;
+}
+.trabajador-img {
+  width: 400px; /* Ajusta el tamaño de la imagen según sea necesario */
+  height: 400px;
+  object-fit: cover;
+  margin: 0 50px;
+}
+.trabajador-info {
+  max-width: 600px;
+}
+.trabajador-info h2 {
+  margin: 0;
+}
+.trabajador-info ul {
+  list-style-type:circle ;
+  padding-left: 20px;
+}
+.imagen-principal-nosotros{
+    display: flex;
+    justify-content: center;
+    padding-inline: 30px;
+}
+.enlaces-trabajador{
+    display: flex;
+    text-align: center;
+    margin: auto;
+    gap: 10px;
+    padding-top: 10px;
+}
+.enlaces-trabajador p{
+    margin-top: 2px;
+}
+.enlaces-trabajador a{
+    color: #28285D;
+}
+.trabajadores-container-responsive{
+    display: none;
+}
+.trabajadores-container-responsive{
+    margin-top: 20px;
+    margin-inline: auto;
+}
+.trabajador-nombre-responsive{
+    font-size: 2rem;
+    text-align: center;
+}
+.trabajador-img-responsive{
+    margin: auto;
+    margin-top: 20px;
+    width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: 300px;
+    object-fit: cover;
+}
+.trabajador-info-responsive ul{
+    list-style-type:circle ;
+    padding-left: 20px;
+}
+.enlaces-trabajador{
+    margin-bottom: 20px;
+} 
+
+.trabajador-nombre{
+    font-size: 2rem;
+}
+.linea-trabajador{
+    border: solid 0.5px #62539F
+    
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+
+/** Seccion Servicios **/
+.servicios{
+    margin-top: 10px;
+    background-color: #fffffff6;
+    border-radius: 40px;
+    padding: 30px;
+    gap: 20px;
+    justify-content: center;
+    text-align: start;
+    margin-inline: 20px;
+}
+.servicios h2{
+    font-size: 2.8rem;
+    padding-bottom: 20px;
+}
+.tipos-servicios-div{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding-top: 20px;
+}
+.tipos-servicios-div div{
+    font-size: 1.5rem;
+}
+.icono-servicios{
+    color: #62539F;
+    margin: auto;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+.linea-servicios{
+    margin-top: 20px;
+}
+.formaciones{
+    margin-top: 20px;
+}
+.icono-servicios:hover{
+    transform: scale(1.2); /* Ajusta la escala según sea necesario */
+}
+.sombra{
+    border-radius: 47px;
+    background: #ffffff;
+    box-shadow:  30px 30px 100px #e3e3e3,
+                -30px -30px 100px #ffffff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.servicios-responsive{
+    display: none;
+    margin-top: 50px;
+    background-color: #fffffff6;
+    border-radius: 40px;
+    padding: 30px;
+    gap: 20px;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 30px;
+}
+.servicios-responsive h2{
+    font-size: 2.5rem;
+    padding-bottom: 20px;
+}
+.tipos-servicios-div-responsive{
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+    padding-top: 20px;
+}
+.tipos-servicios-div-responsive div{
+    font-size: 1.5rem;
+}
+.icono-servicios{
+    color: #62539F;
+    margin: auto;
+    transition: transform 0.3s ease;
+}
+.icono-servicios-container:hover .icono-servicios {
+  transform: scale(1.2); /* Ajusta la escala según sea necesario */
+}
+.linea-servicios{
+    margin-top: 20px;
+}
+.formaciones{
+    margin-top: 20px;
+}
+
+.titulo-servicios{
+    text-align: center;
+    font-size: 25px;
+    color: var(--color-gris);
+    border-radius: 30px;
+}
+
+.container-servicios-uno{
+    background: url('/assets/atencion-individual.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-servicios-dos{
+    background: url('/assets/atencion-pareja.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-servicios-tres{
+    background: url('/assets/atencion-familiar.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.container-servicios {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    align-items: center; /* Alinea los elementos hijos al final del contenedor */
+    justify-content: center;
+    text-align: center;
+    border-image: fill 0 linear-gradient(#0001, #000); /* Alinea el texto a la derecha */
+    transition: transform 0.3s ease;
+    padding: 10px; /* Añade un poco de espacio alrededor del texto */
+}
+
+
+.container-servicios h2 {
+    color: #ffffff;
+    font-size: 2rem; /* Asegúrate de que el texto sea legible */
+}
+
+.container-servicios:hover{
+    transform: scale(1.05);
+
+}
+
+.texto-servicios{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    color: #42387A;
+    padding: 10px;
+    border-top: 1px solid #42387A;
+}
+
+.boton-servicios {
+    margin-inline: auto;
+    margin-top: 30px;
+    background-color: #42387A;
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 40px;
+    gap: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1s;
+    border: solid 1px #42387A;
+}
+
+.boton-servicios:hover{
+    background-color: #ffffff;
+    color: #42387A;
+    
+}
+
+/** Formulario **/
+.formulario {
+    background: url(/assets/formulario.webp);
+    height: 80vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.datos {
+    display: block;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    font-size: 20px;
+    height: auto;
+    width: auto;
+    text-align: center;
+    color: #fff;
+    border-radius: 10px;
+    background-color: rgba(40, 40, 93 , 0.5);
+    padding: 40px 60px 40px 60px;
+}
+.datos h2{
+    margin-bottom: 10px;
+    font: bold;
+    font-size: 2rem;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    margin-top: 10px;
+    border-radius: 20px; 
+    padding: 10px; 
+    margin-bottom: 10px;  
+    width: 100%; 
+    box-sizing: border-box; 
+    color: #000;
+}
+input[type="submit"] {
+    cursor: pointer;    
+}
+
+
+.card {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 25px;
+    gap: 20px;
   }
-}
+  
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/*------------------------ Responsive ------------------------*/
+@media only screen  and (max-width:480px){
+    .escuelas-contenedor{
+        display: block;
+    }
+    .escuelas{
+        max-width: 200px;
+        margin: auto;
+        margin-top: 20px;
+    }
+    .imagen-principal{
+        margin-top: 0;
+    }
+    .titulo-inicio{
+        font-size: 2rem;
+    }
+    .barra-desplegable {
+        width: 200px;
+    }
+    .servicios-responsive{
+        padding: 30px;
+        margin: 10px 20px;
+    }
+    .servicios-responsive{
+        display: block;
+    }
+    .tipos-servicios-div-responsive{
+        display: block;
+        padding-block: 20px;
+    }
+    .enlaces-servicios{
+        margin-top: 20px;
+    }
+    .servicios{
+        display: none;
+    }
+    .servicios-responsive h2{
+        font-size: 2rem;
+        padding-bottom: 20px;
+    }
+    .svg-container{
+        display: none;
+    }
+    .svg-container-responsive {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+      }
+      
+      .svg-style {
+        fill: #453B7E;
+        width: 100%;
+        height: auto;
+        transform: scaleX(-1);
+      }
+      
+      .svg-path-1 {
+        opacity: 0.25;
+      }
+      
+      .svg-path-2 {
+        opacity: 0.5;
+      }
+    .logo-inicio img{
+        max-width: 80% ;
+    }
+    .enlaces-inicio{
+        display: none;
+    }
+    .bars__menu{
+        display: block;
+    }
+    .trabajadores-container{
+        display: none;
+    }
+    .trabajadores-container-responsive{
+        display: block;
+        margin-top: 20px;
+        margin-inline: auto;
+    }
+    .trabajador-nombre-responsive{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .trabajador-img-responsive{
+        margin: auto;
+        margin-top: 20px;
+        width: 250px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: 250px;
+        object-fit: cover;
+    }
+    .trabajador-info-responsive ul{
+        list-style-type:circle ;
+        padding-left: 20px;
+    }
+    .trabajador-nombre-responsive{
+        font-size: 1.5rem;
+    }
+    .lista-trabajador-responsive{
+        font-size: 1rem;
+        padding: 2px;
+    }
+    .enlaces-trabajador{
+        margin-bottom: 20px;
+    }
+    
+    .datos{
+        height: auto;
+        font-size: 80%;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+        border-radius: 20px;  
+        margin-bottom: 10px;   
+        box-sizing: border-box; 
+    }
+    
+    .titulo-nosotros p{
+        font-size: 4vw;
+        text-align: center;
+    }
+    .form-group label{
+        font-size: 3vw;
+    }
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group textarea {
+        width: 100%; 
+        padding: 1px; 
+        margin-left: 0px;   
+    }
+    .form-group input[type="submit"] {
+        width: auto;
+        padding: 5px 10px; 
+        cursor: pointer; 
+        font-size: 4vw;
+    }
+    .lottie-animacion{
+        width: 90%;
+    }
+    .titulo-nosotros-formaciones{
+        font-size: 2rem;
+    }
+    .subtitulo-formaciones{
+        font-size: 1.5rem;
+    }
+    .parrafo-formaciones{
+        font-size: 1.2rem;
+    }
+}
+@media only screen and (min-width:481px) and (max-width:600px){
+    .escuelas-contenedor{
+        display: block;
+    }
+    .escuelas{
+        max-width: 300px;
+        margin: 30px;
+    }
+    .imagen-principal{
+        margin-top: 0;
+    }
+    .servicios-responsive{
+        display: block;
+    }
+    .tipos-servicios-div-responsive{
+        display: block;
+    }
+    
+    .servicios{
+        display: none;
+    }
+    .svg-container{
+        display: none;
+    }
+    .svg-container-responsive {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+      }
+      
+      .svg-style {
+        fill: #453B7E;
+        width: 100%;
+        height: auto;
+        transform: scaleX(-1);
+      }
+      
+      .svg-path-1 {
+        opacity: 0.25;
+      }
+      
+      .svg-path-2 {
+        opacity: 0.5;
+      }
+    .enlaces-inicio{
+        display: none;
+    }
+    .bars__menu{
+        display: block;
+    }
+    .datos{
+        height: auto;
+        font-size: 80%;
+    }
+    input[type="text"],
+    input[type="tel"],
+    input[type="email"] {
+        border-radius: 20px;  
+        margin-bottom: 10px;   
+        box-sizing: border-box; 
+    }
+    
+    .trabajadores-container{
+        display: none;
+    }
+    .trabajadores-container-responsive{
+        display: block;
+    }
+    .trabajador-nombre-responsive{
+        font-size: 1.5rem;
+    }
+    .lista-trabajador-responsive{
+        font-size: 1.2rem;
+        padding: 2px;
+    }
+    .logo-nosotros{
+        margin-top: 10px;
+        width: 50%;
+        align-items: end;
+    }
+    .logo-nosotros img{
+        width: 250px;
+    }
+    .principal-nosotros{
+        display: block;
+    }
+    .seccion-contactate{
+        display: block;
+        margin-bottom: 50px;
+    }
+    .form-group label{
+        font-size: 3vw;
+    }
+
+    .lottie-animacion{
+        width: 60%;
+    }
+}
+@media only screen and (min-width:601px) and (max-width:768px){
+    .escuelas-contenedor{
+        justify-content: center;
+        gap: 10px;
+    }
+    .escuelas{
+        max-width: 250px;
+        margin: 10px;
+    }
+    
+    .imagen-principal{
+        margin-top: 0;
+    }
+    .servicios-responsive{
+        display: block;
+    }
+    .servicios{
+        display: none;
+    }
+    .svg-container{
+        display: none;
+    }
+    .svg-container-responsive {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+      }
+      
+      .svg-style {
+        fill: #453B7E;
+        width: 100%;
+        height: auto;
+        transform: scaleX(-1);
+      }
+      
+      .svg-path-1 {
+        opacity: 0.25;
+      }
+      
+      .svg-path-2 {
+        opacity: 0.5;
+      }
+    .enlaces-inicio{
+        display: none;
+    }
+    .bars__menu{
+        display: block;
+    }
+    .principal h1{
+        font-size: 220%;
+    }
+    .trabajador-img {
+        width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: 300px;
+        object-fit: cover;
+        margin: 0 10px;
+    }
+    .trabajador-nombre{
+        font-size: 1.5rem;
+    }
+    .lista-trabajador{
+        font-size: 1rem;
+        padding: 2px;
+    }
+    .principal-nosotros{
+        display: block;
+    }
+    .titulo-nosotros{
+        width: 90%;
+        padding-bottom: 20px;
+        margin-top: 10px;
+        margin-left: 30px;
+        margin: auto;
+    }
+    .titulo-nosotros h1{
+        font-size: 3vw;
+        text-align: center;
+        margin: auto;
+    }
+    .seccion-contactate{
+        display: block;
+        margin-bottom: 50px;
+    }
+    .container-derecha h2{
+        font-size: 2vw;
+    }
+    .imagen-presentacion{
+        width: 20%;
+        margin-left: 0;
+    }
+    .imagen-presentacion img{
+        margin: auto;
+        max-width: 250px;
+        margin-top: -13px;
+    }
+    .form-group label{
+        font-size: 1.5vw;
+    }
+    
+}
+@media only screen and (min-width:769px) and (max-width:1110px){
+    .escuelas-contenedor{
+        justify-content: center;
+        gap: 10px;
+    }
+    .escuelas{
+        max-width: 300px;
+        margin: 10px;
+    }
+    
+    .servicios-responsive{
+        display: block;
+    }
+    .imagen-principal{
+        margin-top: 0;
+    }
+    .servicios{
+        display: none;
+    }
+    .svg-container{
+        display: none;
+    }
+    .svg-container-responsive {
+        display: block;
+        overflow: hidden;
+        width: 100%;
+        height: auto;
+      }
+      
+      .svg-style {
+        fill: #453B7E;
+        width: 100%;
+        height: auto;
+        transform: scaleX(-1);
+      }
+      
+      .svg-path-1 {
+        opacity: 0.25;
+      }
+      
+      .svg-path-2 {
+        opacity: 0.5;
+      }
+    .enlaces-inicio{
+        display: none;
+    }
+    .bars__menu{
+        display: block;
+    }
+    .tipos-servicios-div {
+        display: block;
+        text-align: center; /* Para centrar elementos en línea */
+        margin-top: 20px;
+        margin-inline: auto;
+    }
+    .trabajador-img {
+        width: 350px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: 350px;
+        object-fit: cover;
+        margin: 0 20px;
+    }
+    /* Para centrar elementos de bloque dentro del div */
+    .tipos-servicios-div > * {
+        margin: 0 auto; /* Centrar los elementos de bloque */
+    }
+    .tipos-servicios-div div{
+        font-size: 1.5rem;
+    }
+    .tipos-servicios-div a{
+        margin-top: 20px;
+        width: 60%;
+
+    }
+    .seccion-contactate{
+        display: block;
+    }
+    .container-derecha h2{
+        font-size: 2vw;
+    }
+    .imagen-presentacion{
+        width: 50%;
+    }
+    .imagen-presentacion img{
+        margin: auto;
+        max-width: 250px;
+        margin-top: 38px;
+    }
+    .form-group label{
+        font-size: 1.5vw;
+    }
+
 }
