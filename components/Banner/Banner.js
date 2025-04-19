@@ -8,13 +8,13 @@ export default function Banner() {
                     ¡Bienvenidos al <span className="text-lila">Circulo Sistémico!</span>{" "}
                   </h1>
         
-                  <h2 className="text-xl lg:text-2xl font-bold color-gris">
+                  <h2 className="text-xl lg:text-2xl font-bold color-gris text-center">
                     Somos una institución conformada por un grupo de profesionales, especializados en Psicología Sistémica.{" "}
                     <br  />
                     Brindamos formación y atención psicológica individual, de pareja y familiar.
                   </h2>
                 </div>
-        <Image quality='100' width={1000} height={800} src='/assets/banner.jpg'  objectFit="contain" className="rounded-2xl" alt="Banner"/>
+        <Image quality='100' width={1000} height={800} src='/assets/banner.JPG'  objectFit="contain" className="rounded-2xl" alt="Banner"/>
   </div>
 </section>
   );
