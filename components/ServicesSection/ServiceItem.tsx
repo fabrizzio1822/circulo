@@ -57,7 +57,7 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ service, index }) => {
         <div className={`w-12 h-12 flex items-center justify-center rounded-full mb-6 ${
           isActive ? 'bg-lila text-white' : 'bg-indigo-100 text-indigo-600'
         }`}>
-          <service.icon size={24} />
+          <service.icon width={24} height={24} />
         </div>
         <h3 className="text-3xl font-bold mb-4 text-gray-800">{service.title}</h3>
         <p className="text-gray-600 leading-relaxed mb-6">{service.description}</p>

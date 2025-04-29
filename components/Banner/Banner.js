@@ -42,7 +42,7 @@ export default function Banner() {
         <Image
           fill
           quality="100"
-          src="/assets/banner.jpg"
+          src="/assets/banner.JPG"
           objectFit="cover"
           alt="Banner"
         />

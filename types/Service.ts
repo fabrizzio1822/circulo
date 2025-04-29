@@ -1,9 +1,9 @@
-import { DivideIcon as LucideIcon } from 'lucide-react';
+import { ComponentType, SVGProps } from 'react';
 
 export interface Service {
   id: string;
   title: string;
   description: string;
-  icon: typeof LucideIcon;
+  icon: ComponentType<SVGProps<SVGSVGElement>>; // este tipo es ideal para íconos SVG
   imageUrl: string;
 }
