@@ -4,6 +4,6 @@ export interface Service {
   id: string;
   title: string;
   description: string;
-  icon: LucideIcon;
+  icon: typeof LucideIcon;
   imageUrl: string;
 }
