@@ -12,9 +12,9 @@ interface LogoAnimationProps {
   topPosition?: string; // Posición 'top' final del logo
 }
 
-export default function LogoAnimation({
+export default function LogoAnimacion({
   onAnimationComplete,
-  logoSrc,
+  logoSrc = '/logo',
   logoAlt = 'Logo',
   largeLogoSize = 120,
   smallLogoSize = 60,

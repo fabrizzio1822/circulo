@@ -9,6 +9,7 @@ module.exports = {
   theme: {
     extend: {
       colors:{
+        violeta: "#28285D",
         turquesa: "#0784B2",
         lila: "#62539F",
       }

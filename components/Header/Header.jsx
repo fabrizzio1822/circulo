@@ -2,6 +2,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import Button from '../Button/Button'
 export default () => {
 
     const [state, setState] = useState(false)
@@ -14,9 +15,9 @@ export default () => {
     ]
 
     return (
-        <nav className="bg-white shadow-lg border-b w-full md:static md:text-sm md:border-none">
+        <nav className="bg-white border-b w-full md:static md:text-sm md:border-none">
             <div className="items-center pr-8  mx-auto md:flex ">
-                <div className="flex items-center justify-between py-2 md:py-4 md:block">
+                <div className="flex items-center justify-between md:block">
                     
                     <Link href='/'>
                         <Image
@@ -60,11 +61,7 @@ export default () => {
                         }
                         <span className='hidden w-px h-6 bg-gray-300 md:block'></span>
                         <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
-                            <li>
-                                <a href="/contacto" className="block py-3 px-4 font-medium text-center text-white bg-lila hover:bg-indigo-500 active:bg-indigo-700 active:shadow-none rounded-lg shadow md:inline">
-                                    Contactanos
-                                </a>
-                            </li>
+                            <Button>Contactanos</Button>
                         </div>
                     </ul>
                 </div>

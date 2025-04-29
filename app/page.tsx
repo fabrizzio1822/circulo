@@ -1,83 +1,61 @@
-'use client'
+"use client"
 
-import { useEffect, useRef } from "react"
-import { motion, useAnimation, useInView } from "framer-motion"
-import Banner from "@/components/Banner/Banner"
+import { useState, useEffect } from "react"
+import { motion } from "framer-motion"
+import Header from "@/components/Header/Header"
+import Logo from "@/components/logo"
+import Content from "@/components/Animacion/Content"
 
-import ServiciosInicio from "@/components/Servicios/ServiciosInicio"
-import ServiciosResponsive from '@/components/Servicios/ServiciosResponsive'
-import Image from "next/image"
-import { HiAcademicCap } from "react-icons/hi2";
-import FormacionesGrid from '@/components/Home/Formaciones'
-import Newsletter from "@/components/Newsletter/NewsLetter"
-
-export default function Component() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true })
-  const mainControls = useAnimation()
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1,
-      transition: { 
-        duration: 0.2, 
-        when: "beforeChildren",
-        staggerChildren: 0.2
-      }
-    }
-  }
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: 0.5 }
-    }
-  }
+export default function Home() {
+  const [animationComplete, setAnimationComplete] = useState(false)
+  const [showContent, setShowContent] = useState(false)
 
   useEffect(() => {
-    if (isInView) {
-      mainControls.start("visible")
-    }
-  }, [isInView])
+    // Retraso antes de mostrar el contenido
+    const timer = setTimeout(() => {
+      setShowContent(true)
+    }, 0)
+
+    return () => clearTimeout(timer)
+  }, [])
 
   return (
-    <main className="">
-      
+    <main className=" bg-gray-50">
+      {/* Header primero */}
       <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, x: -75 },
-          visible: { opacity: 1, x: 0 },
+        initial={{ opacity: 0, y: -50 }}
+        animate={{
+          opacity: showContent ? 1 : 0,
+          y: showContent ? 0 : -50,
         }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.25 }}
+        transition={{
+          duration: 1.2,
+          delay: 0.5,
+          ease: "easeInOut",
+        }}
       >
-       
+        <Header />
       </motion.div>
+
+      {/* Logo en el medio */}
+      <div className="w-full flex justify-center mt-4">
+        <Logo onAnimationComplete={() => setAnimationComplete(true)} showContent={showContent} />
+      </div>
+
+      {/* Contenido al final */}
       <motion.div
-        ref={ref}
-        variants={{
-          hidden: { opacity: 0, x: -75 },
-          visible: { opacity: 1, x: 0 },
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: showContent ? 1 : 0,
         }}
-        initial="hidden"
-        animate={mainControls}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{
+          duration: 1.2,
+          delay: 1.5,
+          ease: "easeInOut",
+        }}
       >
-        <div className="max-w-7xl px-6 my-8 mx-auto">
-          <div className="min-h-screen">
-          <Banner/>
-        </div>
-          <ServiciosInicio />
-          <ServiciosResponsive />
-          <FormacionesGrid/>
-          <Newsletter/>
-        </div>
+        <Content />
       </motion.div>
     </main>
   )
 }
-
