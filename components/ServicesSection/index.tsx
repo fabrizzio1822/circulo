@@ -39,7 +39,7 @@ const ServicesSection: React.FC = () => {
       id="services"
     >
       <div className="container mx-auto px-6">
-      <h2 className="text-2xl sm:text-4xl md:text-7xl font-bold color-gris text-center py-10">Nuestros <br/> <span className="text-lila">Servicios</span></h2>    
+      <h2 className="text-5xl md:text-7xl font-bold color-gris text-center py-10">Nuestros <br/> <span className="text-lila">Servicios</span></h2>    
         
         <div 
           ref={containerRef}

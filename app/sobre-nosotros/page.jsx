@@ -17,11 +17,11 @@ export default function Nosotros(){
             </DIV>
                 
             
-            <div className="bg-lila">
+            <div className="bg-lila rounded-xl hidden sm:block" >
       <img
           src='/assets/image.webp'
           alt="Logo"
-          className='m-auto '
+          className='m-auto  '
       />
     </div>
         </div>

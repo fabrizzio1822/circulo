@@ -55,7 +55,7 @@ export default function Servicios() {
                             </div>
                             <div className={`w-full lg:w-1/2 ${index % 2 === 0 ? 'lg:order-2 lg:pl-12' : 'lg:order-1 lg:pr-12'}`}>
                                 <div className="flex items-center mb-4">
-                                    <servicio.icono className="w-8 h-8 sm:w-10 sm:h-10 color-lila mr-4" />
+                                    <servicio.icono className="w-8 h-8 sm:w-10 sm:h-10 text-lila mr-4" />
                                     <h2 className="text-2xl sm:text-3xl md:text-4xl color-gris font-bold">{servicio.titulo}</h2>
                                 </div>
                                 <hr className={`${index % 2 === 1 ? 'linea-servicios-pagina' : 'linea-servicios-pagina-par'} mb-4`} />

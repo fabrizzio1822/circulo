@@ -120,7 +120,7 @@ export default function SobreNosotrosResponsive() {
             <div className='enlaces-trabajador'>
             <p className='font-bold color-gris'>Redes Sociales:</p>
             <a href={trabajador.instagram} target="_blank" rel="noopener noreferrer">
-              <InstagramFill strokeWidth={2} size={30} />
+              <InstagramFill strokeWidth={2} size={25} />
             </a>
             </div>
             

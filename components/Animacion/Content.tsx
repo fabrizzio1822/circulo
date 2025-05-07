@@ -42,7 +42,7 @@ const staggerContainer = {
 export default function Content() {
   return (
     <motion.div className=" mx-auto pb-20  bg-gray-50" initial="hidden" animate="visible" variants={staggerContainer}>
-       <div className="max-w-7xl px-6  mx-auto">
+       <div className="max-w-7xl  mx-auto">
         <div className="min-h-screen">
           <Banner/>
         </div>

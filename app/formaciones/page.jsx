@@ -17,16 +17,17 @@ const formacionesPdfData = [
   { nombre: 'Formacion en Infancia y Adolescencia desde el modelo sistémico', pdf: '/pdf/formaciones-AdolescenciaInfancia.pdf' },
   { nombre: 'Formacion Sexología Clínica', pdf: '/pdf/formaciones-SexologiaClinica.pdf'},
   { nombre: 'Formacion en terapia centrada en soluciones', pdf: '/pdf/formaciones-TerapiaSoluciones.pdf'},
-
 ];
 
 
 function FormacionesPdfGrid() {
   return (
     <div className="mb-12">
+      <div className='px-4'>
       <Subtitle><span className="text-4xl font-bold color-gris text-center mb-8">
-        Nuestras <span className="color-lila">Formaciones</span>
+        <span className="text-lila">Formaciones</span>
       </span></Subtitle>
+      </div>
       <div className="grid gap-4 lg:grid-cols-3 px-4 "> {/* Ajusté a grid-cols-3 para que coincida con el diseño anterior */}
         {formacionesPdfData.map((formacion, index) => (
           <a
@@ -40,7 +41,7 @@ function FormacionesPdfGrid() {
               <div>
                 <h3 className="text-xl font-semibold mb-2">{formacion.nombre}</h3>
               </div>
-              <p className="text-sm text-purple-600 flex items-center">
+              <p className="text-sm text-lila flex items-center">
                 <File className="mr-2" size={16} /> Ver más
               </p>
             </div>
@@ -53,13 +54,13 @@ function FormacionesPdfGrid() {
 
 export default function Formaciones() {
   return (
-    <div className="m-auto max-w-7xl py-5 px-6">
-      <div className="md:flex lg:text-7xl md:text-6xl sm:text-6xl text-4xl md:gap-4  my-[50px]">
+    <div className="m-auto max-w-7xl py-5 ">
+      <div className="md:flex px-6 lg:text-7xl md:text-6xl sm:text-6xl text-[10vw] md:gap-4  my-[50px]">
         <Title>Nuestras</Title>
         <Subtitle>Formaciones</Subtitle>
       </div>
       <DIV>
-        <div className="mb-20">
+        <div className="mb-20 px-6">
           <h2 className="font-bold color-gris text-3xl py-3 subtitulo-formaciones">
             Desde el Círculo Sistémico, te ofrecemos una formación integral en psicología sistémica.
           </h2>

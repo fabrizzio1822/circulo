@@ -56,7 +56,7 @@ const people = [
 export default function Nosotros() {
   return (
     <div className=" py-24 items-center justify-center max-w-7xl mx-auto ">
-      <h2 className="color-gris text-7xl font-bold mb-10">Nuestro <span className="text-lila">Equipo</span></h2>
+      <h2 className="color-gris px-2 sm:px-0 text-5xl md:text-7xl font-bold mb-10">Nuestro <span className="text-lila">Equipo</span></h2>
      <div className="flex justify-center pt-10"> <AnimatedTooltip items={people} /></div>
     </div>
   );

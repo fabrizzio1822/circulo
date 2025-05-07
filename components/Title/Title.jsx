@@ -10,7 +10,7 @@ export const Title = ({ children, delay = 0 }) => {
         animate={{ y: 0 }}
         exit={{ y: "-100%" }}
         transition={{ duration: 0.4, delay: 0 }}
-        className="font-bold text-gris "
+        className="font-bold color-gris "
       >
         {children}
       </motion.h1>

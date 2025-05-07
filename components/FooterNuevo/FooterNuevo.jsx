@@ -34,7 +34,7 @@ export default function FooterNuevo() {
               <Link href="/formaciones" className="hover:text-white">Formaciones</Link>
             </li>
             <li>
-              <Link href="/contactanos" className="hover:text-white">Contactanos</Link>
+              <Link href="/contacto" className="hover:text-white">Contactanos</Link>
             </li>
           </ul>
         </div>
@@ -47,10 +47,18 @@ export default function FooterNuevo() {
           <h3 className="font-semibold text-white mb-4">Nuestras Redes</h3>
           <div className="flex gap-4 text-2xl">
             <Link
-              href="https://wa.me/TU_NUMERO_DE_WHATSAPP"
+              href="https://wa.me/message/6ACK444DNTJEM1"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-green-500"
+              className="hover:text-green-500 block md:hidden"
+            >
+              <FaWhatsapp />
+            </Link>
+            <Link
+              href="https://api.whatsapp.com/message/6ACK444DNTJEM1?autoload=1&app_absent=0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-green-500 hidden md:block"
             >
               <FaWhatsapp />
             </Link>

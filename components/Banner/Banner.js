@@ -25,8 +25,8 @@ export default function Banner() {
         </div>
 
         <div className="block md:flex justify-evenly gap-10 py-10 z-10">
-          <Button>Explorar Fomaciones</Button>
-          <Button>Explorar Servicios</Button>
+          <Button> <a href="/formaciones">Explorar Fomaciones</a> </Button>
+          <Button> <a href="/servicios">Explorar Servicios</a> </Button>
         </div>
 
         <div className="py-8 z-10">
@@ -36,7 +36,7 @@ export default function Banner() {
        
       </div>
       <motion.div
-        className="relative w-full h-[800px] overflow-hidden rounded-3xl"
+        className="relative w-full  h-[80vw] md:h-[800px] overflow-hidden rounded-3xl"
         style={{ scale: imageScale }}
       >
         <Image

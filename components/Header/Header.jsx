@@ -51,7 +51,7 @@ export default () => {
                         {
                             navigation.map((item, idx) => {
                                 return (
-                                    <li key={idx} className="text-gray-700 font-bold text-md hover:text-indigo-600">
+                                    <li key={idx} className="text-gray-700 px-2 font-bold text-md hover:text-indigo-600">
                                         <a href={item.path} className="block">
                                             {item.title}
                                         </a>
@@ -61,7 +61,7 @@ export default () => {
                         }
                         <span className='hidden w-px h-6 bg-gray-300 md:block'></span>
                         <div className='space-y-3 items-center gap-x-6 md:flex md:space-y-0'>
-                            <Button>Contactanos</Button>
+                            <Button><a href="/contacto">Contactanos</a></Button>
                         </div>
                     </ul>
                 </div>

@@ -29,7 +29,7 @@ const ImageContainer: React.FC = () => {
   };
 
   return (
-    <div className="hidden md:block relative w-full h-full md:min-h-[500px] lg:min-h-[400px] rounded-xl overflow-hidden shadow-xl">
+    <div className="hidden lg:block relative w-full h-full md:min-h-[500px] lg:min-h-[400px] rounded-xl overflow-hidden shadow-xl">
       <AnimatePresence mode="wait">
         <motion.div
           key={activeService}
