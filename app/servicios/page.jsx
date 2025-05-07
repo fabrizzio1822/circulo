@@ -7,7 +7,7 @@ import { Person, PeopleMultiple, PeopleGroup } from 'akar-icons';
 import { AiOutlineWhatsApp } from 'react-icons/ai';
 import Button from "@/components/Button/Button";
 import Image from 'next/image';
-
+import Link from "next/link";
 const servicios = [
     {
         titulo: "Atención Individual",
@@ -66,11 +66,34 @@ export default function Servicios() {
                 ))}
                 <div className="text-center mt-12">
                     <h2 className='text-xl sm:text-2xl md:text-3xl texto-servicios mb-6'>Si te interesa alguno de nuestros servicios no dudes en comunicarte con nosotros!</h2>
+                    <div className="block md:hidden">
                     <Button>
-
-
+                    <Link
+                        href="https://wa.me/message/6ACK444DNTJEM1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                        >
+                        
                         <AiOutlineWhatsApp size={24} className="mr-2" /> Contactar por WhatsApp
+                        </Link>
                     </Button>
+                    </div>
+                    <div className="md:block hidden">
+                    <Button>
+                        <Link
+                            href="https://api.whatsapp.com/message/6ACK444DNTJEM1?autoload=1&app_absent=0"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className=" flex items-center"
+                            >
+                            
+                            <AiOutlineWhatsApp size={24} className="mr-2" /> Contactar por WhatsApp
+                            </Link>
+                    </Button>
+                    </div>
+             
+            
                     
                 </div>
             </DIV>
