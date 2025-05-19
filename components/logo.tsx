@@ -11,17 +11,19 @@ export default function Logo({ onAnimationComplete, showContent }: LogoProps) {
   return (
     <motion.div
       initial={{
-        scale: 1.5,
-        y: 100, // Comienza un poco más abajo para moverse hacia arriba
-      }}
-      animate={{
-        scale: showContent ? 1 : 1.5, // Escala final más natural
-        y: showContent ? 0 : 100, // Termina en su posición natural
-      }}
-      transition={{
-        duration: 2, // Animación lenta
-        ease: "easeInOut", // Sin efecto de rebote
-      }}
+          scale: 1.5,
+          y: 100,
+          opacity: 0,
+        }}
+        animate={{
+          scale: showContent ? 1 : 1.5,
+          y: showContent ? 0 : 100,
+          opacity: showContent ? 1 : 0,
+        }}
+        transition={{
+          duration: 2,
+          ease: "easeInOut",
+        }}
       onAnimationComplete={() => {
         if (showContent) {
           setTimeout(() => {
