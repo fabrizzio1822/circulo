@@ -7,6 +7,7 @@ import { Calendar, File, Envelope } from 'akar-icons';
 import { DIV } from "@/components/Div/Div";
 import Newsletter from '@/components/Newsletter/NewsLetter'
 import Escuelas from '@/components/Escuelas/Escuelas'
+import FixedWhatsappButton from '@/components/Whatsapp/Whatsapp';
 
 const formacionesPdfData = [
   { nombre: 'Formacion en el Modelo Sistémico', pdf: '/pdf/.pdfformaciones-ModeloSistemico.pdf' },
@@ -55,6 +56,7 @@ function FormacionesPdfGrid() {
 export default function Formaciones() {
   return (
     <div className="m-auto max-w-7xl py-5 ">
+      <FixedWhatsappButton/>
       <div className="md:flex px-6 lg:text-7xl md:text-6xl sm:text-6xl text-[10vw] md:gap-4  my-[50px]">
         <Title>Nuestras</Title>
         <Subtitle>Formaciones</Subtitle>

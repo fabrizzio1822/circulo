@@ -8,6 +8,7 @@ import { AiOutlineWhatsApp } from 'react-icons/ai';
 import Button from "@/components/Button/Button";
 import Image from 'next/image';
 import Link from "next/link";
+import FixedWhatsappButton from "@/components/Whatsapp/Whatsapp";
 const servicios = [
     {
         titulo: "Atención Individual",
@@ -32,6 +33,7 @@ const servicios = [
 export default function Servicios() {
     return (
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+            <FixedWhatsappButton/>
             <div className="mb-12">
                 <h1 className=" block md:flex gap-4 text-5xl md:text-6xl font-bold">
                     <Title>Nuestros</Title>

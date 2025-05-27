@@ -30,6 +30,7 @@ export default () => {
                     
                     <div className="md:hidden">
                         <button className="text-gray-500 hover:text-gray-800"
+                            aria-label='menu'
                             onClick={() => setState(!state)}
                         >
                             {

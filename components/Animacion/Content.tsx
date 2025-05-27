@@ -15,6 +15,7 @@ import React from 'react';
 import ServicesSection from '@/components/ServicesSection';
 import { ServiceProvider } from '@/contexts/ServiceContext';
 import Nosotros from '@/components/Nosotros/Nosotros'
+import FixedWhatsappButton from "../Whatsapp/Whatsapp"
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -42,6 +43,7 @@ const staggerContainer = {
 export default function Content() {
   return (
     <motion.div className=" mx-auto pb-20  bg-gray-50" initial="hidden" animate="visible" variants={staggerContainer}>
+       <FixedWhatsappButton/>
        <div className="max-w-7xl  mx-auto">
         <div className="min-h-screen">
           <Banner/>

@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Title } from '@/components/Title/Title';
 import { Envelope, Location, Clock, Phone } from 'akar-icons';
 import { DIV } from '@/components/Div/Div';
+import FixedWhatsappButton from '@/components/Whatsapp/Whatsapp';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -66,6 +67,7 @@ export default function ContactPage() {
 
   return (
     <div className="mx-auto px-4 py-8">
+      <FixedWhatsappButton/>
       <div className="md:text-7xl text-5xl max-w-[90rem] mx-auto">
         <Title>Contacto</Title>
       </div>
