@@ -1,34 +1,80 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 export default () => {
   return (
-    <div className="py-28 bg-white w-full"> {/* Añadimos w-full para ocupar todo el ancho */}
-      <div className="mx-auto px-4 md:px-8 flex flex-wrap gap-x-20 justify-between items-center max-w-screen-xl"> {/* max-w-screen-xl para un ancho máximo amplio */}
-        <div className="space-y-4"> {/* Aumentamos el espacio entre elementos */}
-          <h3 className="text-cyan-400 text-sm font-semibold">
-            NUESTRO RESPALDO
-          </h3>
-          <p className="text-gray-800 text-2xl font-semibold sm:text-5xl">
-            Contamos con el apoyo de las mejores instituciones educativas
-          </p>
-          <p className="text-gray-500 text-lg md:text-2xl  "> {/* Aumentamos la legibilidad del texto secundario */}
-            Trabajamos en colaboración con instituciones líderes para ofrecerte la mejor calidad educativa.
-          </p>
-        </div>
-        <div className="mt-12 lg:mt-0">
-          <ul className="grid grid-cols-2 gap-4 items-center justify-center"> {/* Aumentamos el gap entre logos */}
-            {/* LOGO 2 */}
-            <li className="p-6 bg-white flex justify-center items-center "> {/* Añadimos padding y sombra */}
-              <img className="max-h-[250px] w-auto object-contain" src="/assets/colegio2.png" alt="Escuela 2" /> {/* Aumentamos la altura de la imagen */}
-            </li>
-            {/* LOGO 1 */}
-            <li className="p-6 bg-white flex justify-center items-center "> {/* Añadimos padding y sombra */}
-              <img className="max-h-[250px] w-auto object-contain" src="/assets/colegio1-Photoroom.png" alt="Escuela 1" /> {/* Aumentamos la altura de la imagen */}
-            </li>
+    <section className="py-24 lg:py-32 bg-white w-full overflow-hidden">
+      <div className="lg:mx-[100px] md:mx-[50px] mx-auto px-6 lg:px-12">
+        <div className="grid grid-cols-1 gap-16 lg:gap-24 items-center">
 
-          </ul>
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="space-y-6 lg:space-y-8 max-w-4xl"
+          >
+            <div className="inline-flex items-center gap-2 rounded-full border border-black/5 bg-gray-50 px-5 py-2 text-sm font-medium text-violeta/80">
+              <span className="h-2 w-2 rounded-full bg-turquesa"></span>
+              Nuestro Respaldo
+            </div>
+
+            <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-violeta font-normal leading-[1.1]">
+              Contamos con el apoyo de <em className="italic font-bold">instituciones líderes</em>
+            </h2>
+
+            <p className="text-violeta/70 text-lg md:text-xl leading-relaxed">
+              Trabajamos en colaboración con las mejores instituciones educativas para garantizar y ofrecerte la más alta calidad y prestigio en todas nuestras formaciones.
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
+            className="flex flex-col sm:flex-row flex-wrap items-center justify-center "
+          >
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.4 }}
+              className="flex items-center justify-center"
+            >
+              <img
+                className="max-h-[160px] lg:max-h-[240px] xl:max-h-[400px] w-auto object-contain "
+                src="/assets/escuelas/escuela-1.png"
+                alt="Escuela 1"
+              />
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.4 }}
+              className="flex items-center justify-center"
+            >
+
+              <img
+                className="max-h-[160px] lg:max-h-[240px] xl:max-h-[400px] w-auto object-contain "
+                src="/assets/escuelas/escuela-3.png"
+                alt="Escuela 3"
+              />
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.4 }}
+              className="flex items-center justify-center"
+            >
+              <img
+                className="max-h-[160px] lg:max-h-[240px] xl:max-h-[400px] w-auto object-contain "
+                src="/assets/escuelas/escuela-2.png"
+                alt="Escuela 2"
+              />
+            </motion.div>
+          </motion.div>
+
         </div>
       </div>
-    </div>
+    </section>
   );
 };

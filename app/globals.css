@@ -42,7 +42,7 @@
   text-align: right;
 }
 .trabajador-img {
-  width: 400px; /* Ajusta el tamaño de la imagen según sea necesario */
+  width: 400px; /* Ajusta el tamaÃ±o de la imagen segÃºn sea necesario */
   height: 400px;
   object-fit: cover;
   margin: 0 50px;
@@ -89,7 +89,7 @@
 .trabajador-img-responsive{
     margin: auto;
     margin-top: 20px;
-    width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+    width: 300px; /* Ajusta el tamaÃ±o de la imagen segÃºn sea necesario */
     height: 300px;
     object-fit: cover;
 }
@@ -147,7 +147,7 @@
     margin-top: 20px;
 }
 .icono-servicios:hover{
-    transform: scale(1.2); /* Ajusta la escala según sea necesario */
+    transform: scale(1.2); /* Ajusta la escala segÃºn sea necesario */
 }
 .sombra{
     border-radius: 47px;
@@ -186,7 +186,7 @@
     transition: transform 0.3s ease;
 }
 .icono-servicios-container:hover .icono-servicios {
-  transform: scale(1.2); /* Ajusta la escala según sea necesario */
+  transform: scale(1.2); /* Ajusta la escala segÃºn sea necesario */
 }
 .linea-servicios{
     margin-top: 20px;
@@ -229,13 +229,13 @@
     text-align: center;
     border-image: fill 0 linear-gradient(#0001, #000); /* Alinea el texto a la derecha */
     transition: transform 0.3s ease;
-    padding: 10px; /* Añade un poco de espacio alrededor del texto */
+    padding: 10px; /* AÃ±ade un poco de espacio alrededor del texto */
 }
 
 
 .container-servicios h2 {
     color: #ffffff;
-    font-size: 2rem; /* Asegúrate de que el texto sea legible */
+    font-size: 2rem; /* AsegÃºrate de que el texto sea legible */
 }
 
 .container-servicios:hover{
@@ -419,7 +419,7 @@ input[type="submit"] {
     .trabajador-img-responsive{
         margin: auto;
         margin-top: 20px;
-        width: 250px; /* Ajusta el tamaño de la imagen según sea necesario */
+        width: 250px; /* Ajusta el tamaÃ±o de la imagen segÃºn sea necesario */
         height: 250px;
         object-fit: cover;
     }
@@ -636,7 +636,7 @@ input[type="submit"] {
         font-size: 220%;
     }
     .trabajador-img {
-        width: 300px; /* Ajusta el tamaño de la imagen según sea necesario */
+        width: 300px; /* Ajusta el tamaÃ±o de la imagen segÃºn sea necesario */
         height: 300px;
         object-fit: cover;
         margin: 0 10px;
@@ -735,12 +735,12 @@ input[type="submit"] {
     }
     .tipos-servicios-div {
         display: block;
-        text-align: center; /* Para centrar elementos en línea */
+        text-align: center; /* Para centrar elementos en lÃ­nea */
         margin-top: 20px;
         margin-inline: auto;
     }
     .trabajador-img {
-        width: 350px; /* Ajusta el tamaño de la imagen según sea necesario */
+        width: 350px; /* Ajusta el tamaÃ±o de la imagen segÃºn sea necesario */
         height: 350px;
         object-fit: cover;
         margin: 0 20px;
@@ -775,4 +775,14 @@ input[type="submit"] {
         font-size: 1.5vw;
     }
 
+}
+
+@layer utilities {
+    .transform-3d {
+        transform-style: preserve-3d;
+    }
+    
+    .backface-hidden {
+        backface-visibility: hidden;
+    }
 }

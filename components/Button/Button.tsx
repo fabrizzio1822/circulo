@@ -1,27 +1,110 @@
-export default function Button({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>){
-    return (
-        <div>
-           
-<button
-  type="submit"
-  className="flex justify-center gap-2 items-center mx-auto bg-lila lg:font-bold isolation-auto before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-violeta before:-z-10 before:aspect-square before:hover:scale-150 before:hover:duration-700 relative z-10 pl-4 pr-1 py-2 overflow-hidden border-2 rounded-full group text-white">
-    {children}
-  <svg
-    className="w-8 h-8 bg-white justify-end group-hover:rotate-90 ease-linear duration-300 rounded-full  group-hover:border-none p-2 rotate-45"
-    viewBox="0 0 16 19"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      d="M7 18C7 18.5523 7.44772 19 8 19C8.55228 19 9 18.5523 9 18H7ZM8.70711 0.292893C8.31658 -0.0976311 7.68342 -0.0976311 7.29289 0.292893L0.928932 6.65685C0.538408 7.04738 0.538408 7.68054 0.928932 8.07107C1.31946 8.46159 1.95262 8.46159 2.34315 8.07107L8 2.41421L13.6569 8.07107C14.0474 8.46159 14.6805 8.46159 15.0711 8.07107C15.4616 7.68054 15.4616 7.04738 15.0711 6.65685L8.70711 0.292893ZM9 18L9 1H7L7 18H9Z"
-      className="fill-lila "
-    ></path>
-  </svg>
-</button>
+import { ArrowUpRight } from 'lucide-react';
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
-        </div>
-    )
+type ButtonColor = 'bg-white' | 'bg-violeta' | 'bg-celeste';
+
+interface ButtonProps {
+  children: ReactNode;
+  onClick?: () => void;
+  type?: 'button' | 'submit' | 'reset';
+  className?: string;
+  href?: string;
+  color?: ButtonColor;
+}
+
+export default function Button({
+  children,
+  onClick,
+  type = 'button',
+  className = '',
+  href,
+  color = 'bg-violeta',
+}: ButtonProps) {
+  const isLight = color === 'bg-white' || color === 'bg-celeste';
+
+  const textColor = isLight ? 'text-violeta' : 'text-white';
+
+  const hoverBackground =
+    color === 'bg-violeta'
+      ? 'group-hover:bg-violeta'
+      : color === 'bg-celeste'
+        ? 'group-hover:bg-celeste'
+        : 'group-hover:bg-white';
+
+  const content = (
+    <div
+      className={`
+        inline-flex items-center gap-0.5
+        group cursor-pointer
+        transition-all duration-700
+        ease-[cubic-bezier(0.22,1,0.36,1)]
+        group-hover:gap-0
+        ${className}
+      `}
+    >
+      <span
+        className={`
+          ${color}
+          ${textColor}
+          px-6 py-4
+          rounded-full
+          font-medium
+          shadow-md
+          relative z-10
+          transition-all duration-700
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+          ${hoverBackground}
+          group-hover:rounded-r-[18px]
+          group-hover:pr-7
+        `}
+      >
+        {children}
+      </span>
+
+      <span
+        className={`
+          ${color}
+          ${textColor}
+          w-14 h-14
+          shrink-0
+          rounded-full
+          flex items-center justify-center
+          relative z-10
+          transition-all duration-700
+          ease-[cubic-bezier(0.22,1,0.36,1)]
+          ${hoverBackground}
+          group-hover:rounded-l-[18px]
+          group-hover:-translate-x-1
+        `}
+      >
+        <ArrowUpRight
+          className="
+            w-6 h-6
+            transition-transform duration-400
+            ease-[cubic-bezier(0.22,1,0.36,1)]
+            group-hover:rotate-45
+          "
+        />
+      </span>
+    </div>
+  );
+
+  if (href) {
+    if (href.startsWith('http') || href.startsWith('#')) {
+      return <a href={href}>{content}</a>;
+    }
+
+    return <Link href={href}>{content}</Link>;
+  }
+
+  return (
+    <button
+      type={type}
+      onClick={onClick}
+      className="border-none bg-transparent p-0 outline-none"
+    >
+      {content}
+    </button>
+  );
 }

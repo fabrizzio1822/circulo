@@ -4,8 +4,8 @@ import { FaWhatsapp } from 'react-icons/fa'; // Asegúrate de tener react-icons 
 
 const FixedWhatsappButton: React.FC = () => {
   // La URL del link de WhatsApp que ya estás utilizando
-  const whatsappLinkMobile = "https://wa.me/message/6ACK444DNTJEM1";
-  const whatsappLinkDesktop = "https://api.whatsapp.com/message/6ACK444DNTJEM1?autoload=1&app_absent=0";
+  const whatsappLinkMobile = "https://wa.me/543885737111";
+  const whatsappLinkDesktop = "https://wa.me/543885737111";
 
   return (
     <>
@@ -14,7 +14,7 @@ const FixedWhatsappButton: React.FC = () => {
         href={whatsappLinkMobile}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 p-3 bg-green-500 text-white rounded-full shadow-lg 
+        className="fixed bottom-5 right-5 z-[9999] p-3 bg-green-500 text-white rounded-full shadow-lg 
                    hover:bg-green-600 hover:scale-110 transition-transform duration-300 ease-in-out
                    block md:hidden" // 'block' para móviles, 'hidden' para escritorio
         aria-label="Contactar por WhatsApp"
@@ -27,7 +27,7 @@ const FixedWhatsappButton: React.FC = () => {
         href={whatsappLinkDesktop}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 p-3 bg-green-500 text-white rounded-full shadow-lg 
+        className="fixed bottom-5 right-5 z-[9999] p-3 bg-green-500 text-white rounded-full shadow-lg 
                    hover:bg-green-600 hover:scale-110 transition-transform duration-300 ease-in-out
                    hidden md:block" // 'hidden' para móviles, 'block' para escritorio
         aria-label="Contactar por WhatsApp"

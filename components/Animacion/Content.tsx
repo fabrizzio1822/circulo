@@ -1,21 +1,24 @@
 "use client"
-
+import React from 'react';
 import { motion } from "framer-motion"
 import Banner from "@/components/Banner/Banner"
-
+import Diferenciales from '../Diferenciales/Diferenciales';
 import ServiciosInicio from "@/components/Servicios/ServiciosInicio"
 import ServiciosResponsive from '@/components/Servicios/ServiciosResponsive'
 import Image from "next/image"
 import { HiAcademicCap } from "react-icons/hi2";
 import FormacionesGrid from '@/components/Home/Formaciones'
 import Newsletter from "@/components/Newsletter/NewsLetter"
-import {ServiciosNuevo} from "../Servicios/ServiciosNuevo"
+import { ServiciosNuevo } from "../Servicios/ServiciosNuevo"
+import FAQ from "@/components/FAQ/FAQ"
+import Testimonials from "@/components/Testimonials/Testimonials"
+import Comunidad from "@/components/Comunidad/Comunidad"
 
-import React from 'react';
 import ServicesSection from '@/components/ServicesSection';
 import { ServiceProvider } from '@/contexts/ServiceContext';
 import Nosotros from '@/components/Nosotros/Nosotros'
 import FixedWhatsappButton from "../Whatsapp/Whatsapp"
+import HeroCongreso from '../Congreso/Congreso';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -42,23 +45,17 @@ const staggerContainer = {
 
 export default function Content() {
   return (
-    <motion.div className=" mx-auto pb-20  bg-gray-50" initial="hidden" animate="visible" variants={staggerContainer}>
-       <FixedWhatsappButton/>
-       <div className="max-w-7xl  mx-auto">
-        <div className="min-h-screen">
-          <Banner/>
-        </div>
-     
-      </div>
-      
-      <Nosotros/>
-      
-      <ServiceProvider>
-        <ServicesSection />
-      </ServiceProvider>
-     
-      <FormacionesGrid/>
-      <Newsletter/>
+    <motion.div className=" mx-auto bg-gray-50" >
+      <FixedWhatsappButton />
+      <Banner />
+      <HeroCongreso />
+      <ServicesSection />
+      <Diferenciales />
+      <FormacionesGrid />
+      <Comunidad />
+      <Testimonials />
+      <FAQ />
+      <Newsletter />
     </motion.div>
   )
 }

@@ -14,7 +14,7 @@ export default function Home() {
     // Iniciar la secuencia de animación para completar
     const completeTimer = setTimeout(() => {
       setAnimationStage("complete")
-    }, 1500) // Tiempo que dura la animación inicial
+    }, 0) // Tiempo que dura la animación inicial
 
     return () => clearTimeout(completeTimer)
   }, [])
