@@ -198,12 +198,10 @@ export default function Formaciones() {
                   className="w-[85vw] sm:w-[340px] lg:w-[400px] flex-shrink-0 bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
+                    <img
                       src={f.image}
                       alt={f.title}
-                      fill
-                      className="object-cover pointer-events-none select-none rounded-3xl"
-                      sizes="(max-width: 640px) 85vw, (max-width: 1024px) 340px, 380px"
+                      className="w-full h-full object-cover pointer-events-none select-none"
                       draggable={false}
                     />
                   </div>

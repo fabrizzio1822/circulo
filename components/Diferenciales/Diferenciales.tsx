@@ -208,7 +208,7 @@ export default function Diferenciales() {
                     >
                         <motion.div style={{ y: yMedium }} className="absolute inset-0 m-auto w-[80%] h-[80%] rounded-2xl overflow-hidden shadow-2xl z-10">
                             <Image
-                                src="/assets/nosotros.jpg"
+                                src="/assets/nostros.jpg"
                                 alt="Espacio de consultorio"
                                 fill
                                 className="object-cover"
