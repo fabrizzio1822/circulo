@@ -122,7 +122,7 @@ export default function Diferenciales() {
                         <div className="relative w-[300px] sm:w-[400px] lg:w-full h-full">
                             <motion.div style={{ y: ySlow }} className="absolute top-0 left-0 lg:left-12 w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] lg:w-[340px] lg:h-[340px] rounded-2xl overflow-hidden shadow-2xl z-10">
                                 <Image
-                                    src="/assets/hero-1.jpg"
+                                    src="/assets/img-7.jpg"
                                     alt="Terapeuta en sesión"
                                     fill
                                     className="object-cover"
@@ -131,7 +131,7 @@ export default function Diferenciales() {
                             </motion.div>
                             <motion.div style={{ y: yFast }} className="absolute bottom-0 right-0 lg:right-8 w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] lg:w-[340px] lg:h-[340px] rounded-2xl overflow-hidden shadow-2xl z-50">
                                 <Image
-                                    src="/assets/hero-2.jpg"
+                                    src="/assets/img-1.jpg"
                                     alt="Persona en consulta"
                                     fill
                                     className="object-cover"
@@ -188,38 +188,13 @@ export default function Diferenciales() {
                         <TextBlock
                             title="Sesiones presenciales"
                             titleItalic="u online"
-                            description="Consultorio en pleno centro de San Salvador de Jujuy o encuentros virtuales para quienes están en otras provincias o prefieren la comodidad de su casa. La modalidad la elegís vos."
+                            description="Nuestra casa terapéutica se ubica en San Salvador de Jujuy (Barrio Ciudad de Nieva). También contamos con encuentros virtuales para quienes están en otras provincias o prefieren la comodidad de su casa. La modalidad la elegís vos."
                             cta="Conocer más"
                             href="/contacto"
                         />
                     </div>
                 </div>
 
-                {/* Bloque 3: texto izq — 1 foto der */}
-                <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-                    <TextBlock
-                        title="Un enfoque cálido y"
-                        titleItalic="sin apuros"
-                        description="No trabajamos con recetas. Cada proceso es único porque considera tu contexto, tus vínculos y tu momento vital. La mirada sistémica es nuestra forma de estar."
-                    />
-                    <motion.div
-                        {...photoIn}
-                        className="relative h-[320px] lg:h-[440px] w-full"
-                    >
-                        <motion.div style={{ y: yMedium }} className="absolute inset-0 m-auto w-[80%] h-[80%] rounded-2xl overflow-hidden shadow-2xl z-10">
-                            <Image
-                                src="/assets/nostros.jpg"
-                                alt="Espacio de consultorio"
-                                fill
-                                className="object-cover"
-                                sizes="500px"
-                            />
-                        </motion.div>
-                        <motion.div style={{ rotate: rotateRight }} className="absolute inset-0 z-40 pointer-events-none origin-center">
-                            <ScribbleRing colors={["#C4954A", "#0784B2", "#FFFFFF"]} baseRotation={10} />
-                        </motion.div>
-                    </motion.div>
-                </div>
             </div>
         </section>
     );

@@ -306,7 +306,6 @@ export default function ContactPage() {
           </div>
         </motion.div>
       </section>
-      <Newsletter />
     </div>
   );
 }

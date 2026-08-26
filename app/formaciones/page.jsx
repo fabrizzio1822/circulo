@@ -116,7 +116,6 @@ export default function Formaciones() {
 
       <FormacionesPdfGrid />
       <Escuelas />
-      <Newsletter />
 
     </div>
   );

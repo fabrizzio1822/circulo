@@ -95,7 +95,7 @@ export default function Servicios() {
                             Nuestros <em className="italic font-bold">Servicios</em>
                         </h1>
                         <p className="text-violeta/60 text-lg lg:text-xl">
-                            Acompañamos tus procesos con un enfoque sistémico, centrado en tus vínculos y el entorno que te rodea.
+                            Cada proceso es único porque consideramos tu contexto, tus relaciones, tu historia y momento vital. La mirada sistémica es nuestra forma de trabajar
                         </p>
                     </div>
 
@@ -274,7 +274,6 @@ export default function Servicios() {
                 </motion.div>
 
             </section>
-            <Newsletter />
         </div>
     );
 }

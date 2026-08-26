@@ -33,6 +33,11 @@ export default function FooterNuevo() {
             <p className="text-white/70 text-[15px]">
               📍 San Salvador de Jujuy, Jujuy, Argentina
             </p>
+            <div className="flex flex-wrap items-center gap-6 mt-8">
+              <img src="/assets/Fundaif.png" alt="Fundaif" className="h-12 md:h-16 w-auto object-contain grayscale opacity-70 hover:opacity-100 transition-opacity" />
+              <img src="/assets/colegio1-Photoroom.png" alt="Colegio" className="h-12 md:h-16 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+              <img src="/assets/colegio2.png" alt="Colegio" className="h-12 md:h-16 w-auto object-contain brightness-0 invert opacity-80 hover:opacity-100 transition-opacity" />
+            </div>
           </div>
 
           {/* Col 2: Empresa (Span 1) */}

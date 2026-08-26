@@ -64,7 +64,7 @@ export interface HeroCongresoProps {
 
 const defaultStats: HeroStat[] = [
     { value: "2 días", label: "DE ENCUENTRO" },
-    { value: "6", label: "DISERTANTES PRINCIPALES" },
+    { value: "15", label: "DISERTANTES PRINCIPALES" },
     { value: "8", label: "EJES TEMÁTICOS" },
     { value: "Cabildo", label: "HISTÓRICO DE JUJUY" },
 ];

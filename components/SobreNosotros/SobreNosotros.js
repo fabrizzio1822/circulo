@@ -7,7 +7,7 @@ const trabajadores = [
   {
     img: "/assets/Adrian.png",
     nombre: "Adrian Hinojosa",
-    cargo: "Director y Fundador",
+    cargo: "Director y Fundador\nDr. En psicología - Psicoterapeuta",
     lista: [
       "Director y Fundador del Circulo de Estudios Sistémicos.",
       "Doctor en Psicología",
@@ -18,19 +18,6 @@ const trabajadores = [
       "Docente en escuelas de posgrado (Escuela Sistémica Argentina y Escuela de Terapia Familiar Sant Pau, Barcelona)",
     ],
     instagram: "https://www.instagram.com/adriancitohinojosa?igsh=dWM0YjgzbzUxcWwy",
-  },
-  {
-    img: "/assets/Diego Ficoseco.jpg",
-    nombre: "Diego Ficoseco",
-    cargo: "Terapeuta de Pareja y Familia",
-    lista: [
-      "Mg Terapia Familiar y de Parejas (Escuela de TF Sant Pau, Barcelona).",
-      "Lic. en Psicología (UNSTA, Tucumán).",
-      "Psicoterapeuta clínico",
-      "Especialista en modelo sistémico.",
-      "Docente universitario y de escuelas de posgrado.",
-    ],
-    instagram: "https://www.instagram.com/psico.fico?igsh=MW52dWJyeHlhYmgzMQ",
   },
   {
     img: "/assets/Alejandra Peñaloza.jpeg",
@@ -55,6 +42,63 @@ const trabajadores = [
       "Especialista en Modelo Sistémico",
       "Psicoterapeuta de familia e individual.",
       "Diplomado en psicoterapia sistémica de Niños, niñas y adolescentes",
+    ],
+    instagram: "https://www.instagram.com/circulosistemico/",
+  },
+  {
+    img: "/assets/Diego Ficoseco.jpg",
+    nombre: "Diego Ficoseco",
+    cargo: "Terapeuta de Pareja y Familia",
+    lista: [
+      "Mg Terapia Familiar y de Parejas (Escuela de TF Sant Pau, Barcelona).",
+      "Lic. en Psicología (UNSTA, Tucumán).",
+      "Psicoterapeuta clínico",
+      "Especialista en modelo sistémico.",
+      "Docente universitario y de escuelas de posgrado.",
+    ],
+    instagram: "https://www.instagram.com/psico.fico?igsh=MW52dWJyeHlhYmgzMQ",
+  },
+  {
+    img: "/assets/Joanna Abregu.jpg",
+    nombre: "Joanna Abregu",
+    cargo: "Psicoterapeuta Sistémica",
+    lista: [
+      "Licenciada en Psicología",
+      "Especialista en Modelo Sistémico",
+      "Diplomado en psicoterapia sistémica de Niños, niñas y adolescentes",
+    ],
+    instagram: "https://www.instagram.com/circulosistemico/",
+  },
+  {
+    img: null,
+    nombre: "Matias Arnold",
+    cargo: "Psicólogo",
+    lista: [
+      "Lic. en psicología",
+      "Especialista en Modelo Sistémico",
+      "Intervenciones familiares en discapacidad"
+    ],
+    instagram: "https://www.instagram.com/circulosistemico/",
+  },
+  {
+    img: "/assets/Flavia-Quispe.jpeg",
+    nombre: "Flavia Quispe Mendez",
+    cargo: "Terapeuta de infancia y adolescencia",
+    lista: [
+      "Esp. en Modelo Sistémico",
+      "Certificada internacional en EMDR",
+      "Docente universitaria (UCASAL)",
+      "Psicóloga clinica, individual"
+    ],
+    instagram: "https://www.instagram.com/circulosistemico/",
+  },
+  {
+    img: null,
+    nombre: "Daniela Najar",
+    cargo: "Psicóloga Clínica",
+    lista: [
+      "Lic. En psicologia",
+      "Especialista en Modelo Sistémico"
     ],
     instagram: "https://www.instagram.com/circulosistemico/",
   },
@@ -94,22 +138,11 @@ const trabajadores = [
       "Diplomado en psicoterapia sistémica de Niños, niñas y adolescentes",
     ],
     instagram: "https://www.instagram.com/jorojascordoba?utm_source=qr&igsh=MW0wNnp4bjQzMXNvNQ==",
-  },
-  {
-    img: "/assets/Joanna Abregu.jpg",
-    nombre: "Joanna Abregu",
-    cargo: "Psicoterapeuta Sistémica",
-    lista: [
-      "Licenciada en Psicología",
-      "Especialista en Modelo Sistémico",
-      "Diplomado en psicoterapia sistémica de Niños, niñas y adolescentes",
-    ],
-    instagram: "https://www.instagram.com/circulosistemico/",
-  },
+  }
 ];
 
 const stats = [
-  { valor: "8", label: "profesionales en el equipo" },
+  { valor: "11", label: "profesionales en el equipo" },
   { valor: "15+", label: "años acompañando" },
   { valor: "2000+", label: "personas atendidas" },
 ];
@@ -167,7 +200,7 @@ function TeamModal({ trabajador, onClose }) {
           <h3 className="font-serif text-3xl text-violeta font-normal mb-1">
             {trabajador.nombre}
           </h3>
-          <p className="text-turquesa font-medium mb-4">{trabajador.cargo}</p>
+          <p className="text-turquesa font-medium mb-4 whitespace-pre-line">{trabajador.cargo}</p>
           <div className="h-[2px] w-12 bg-turquesa mb-6"></div>
 
           <ul className="space-y-3 mb-6">
@@ -233,16 +266,18 @@ export default function SobreNosotros() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            className="font-serif text-5xl md:text-7xl text-white leading-[1.1] mb-6"
+            className="font-serif text-[clamp(2.5rem,min(7vw,7vh),4.5rem)] text-white leading-[1.1] mb-6"
           >
-            Terapia sistémica para personas, parejas y familias
+            TERAPIA SISTÉMICA
+            <br />
+            Individual, parejas y familias
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-white/70 text-lg sm:text-2xl leading-relaxed max-w-2xl mx-auto"
+            className="text-white/70 text-[clamp(1.125rem,min(2.5vw,2.5vh),1.5rem)] leading-relaxed max-w-[min(100%,42rem)] mx-auto"
           >
             Hace más de 15 años acompañamos procesos de cambio con un equipo
             de psicólogos y terapeutas especializados en el modelo sistémico.
@@ -257,7 +292,7 @@ export default function SobreNosotros() {
               transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
               className="w-full sm:w-auto rounded-[1.5rem] overflow-hidden aspect-[4/5] shadow-xl bg-gray-100"
             >
-              <img src="/assets/hero-1.jpg" alt="Círculo Sistémico" className="w-full h-full object-cover" />
+              <img src="/assets/img-4.jpg" alt="Círculo Sistémico" className="w-full h-full object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -266,7 +301,7 @@ export default function SobreNosotros() {
               transition={{ duration: 0.8, delay: 0.35, ease: [0.16, 1, 0.3, 1] }}
               className="w-full sm:w-auto rounded-[1.5rem] overflow-hidden aspect-[4/5] shadow-xl bg-gray-100 hidden sm:block"
             >
-              <img src="/assets/hero-2.jpg" alt="Círculo Sistémico" className="w-full h-full object-cover" />
+              <img src="/assets/img-5.jpg" alt="Círculo Sistémico" className="w-full h-full object-cover" />
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -275,7 +310,7 @@ export default function SobreNosotros() {
               transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="w-full sm:w-auto rounded-[1.5rem] overflow-hidden aspect-[4/5] shadow-xl bg-gray-100 hidden sm:block"
             >
-              <img src="/assets/hero-3.jpg" alt="Círculo Sistémico" className="w-full h-full object-cover" />
+              <img src="/assets/img-6.jpg" alt="Círculo Sistémico" className="w-full h-full object-cover" />
             </motion.div>
           </div>
         </div>
@@ -327,40 +362,60 @@ export default function SobreNosotros() {
           Nuestros Profesionales
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
           {trabajadores.map((trabajador, index) => (
             <motion.button
               key={trabajador.nombre}
               type="button"
-              onClick={() => setSeleccionado(trabajador)}
+              onClick={() => trabajador.img && setSeleccionado(trabajador)}
               initial={{ opacity: 0, y: 50, scale: 0.95 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.8, delay: (index % 3) * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="group relative aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] bg-gray-100 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-turquesa"
+              className={`group relative aspect-[4/5] w-full overflow-hidden rounded-[1.75rem] bg-gray-100 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-turquesa ${!trabajador.img ? 'cursor-default' : 'cursor-pointer'}`}
             >
-              <img
-                src={trabajador.img}
-                alt={trabajador.nombre}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-violeta/90 via-violeta/20 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end z-10">
-                <p className="text-white font-serif text-2xl mb-0.5">{trabajador.nombre}</p>
-                <p className="text-white/70 text-sm mb-3">{trabajador.cargo}</p>
-                <div className="flex items-center gap-2 text-turquesa text-sm font-medium opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
-                  <span>Ver más información</span>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
+              {trabajador.img ? (
+                <>
+                  <img
+                    src={trabajador.img}
+                    alt={trabajador.nombre}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-violeta/90 via-violeta/20 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-5 flex flex-col justify-end z-10">
+                    <p className="text-white font-serif text-2xl mb-0.5">{trabajador.nombre}</p>
+                    <p className="text-white/70 text-sm mb-3 whitespace-pre-line">{trabajador.cargo}</p>
+                    <div className="flex items-center gap-2 text-turquesa text-sm font-medium opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300">
+                      <span>Ver más información</span>
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="w-full h-full bg-white p-5 md:p-6 flex flex-col shadow-inner overflow-hidden border border-gray-100">
+                  <h3 className="font-serif text-2xl text-violeta font-normal mb-1 leading-tight">
+                    {trabajador.nombre}
+                  </h3>
+                  <p className="text-turquesa text-sm font-medium mb-3 whitespace-pre-line">{trabajador.cargo}</p>
+                  <div className="h-[2px] w-8 bg-turquesa mb-4 shrink-0"></div>
+
+                  <ul className="space-y-2.5 overflow-y-auto mb-2">
+                    {trabajador.lista.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-violeta/70 text-xs md:text-sm leading-relaxed">
+                        <span className="shrink-0 mt-1 text-turquesa/40 text-[10px]">◆</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              </div>
+              )}
             </motion.button>
           ))}
         </div>
       </section>
       <Testimonials />
-      <Newsletter />
 
       <AnimatePresence>
         {seleccionado && (

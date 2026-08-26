@@ -50,12 +50,11 @@ export default function Content() {
       <Banner />
       <HeroCongreso />
       <ServicesSection />
-      <Diferenciales />
-      <FormacionesGrid />
       <Comunidad />
+      <FormacionesGrid />
+      <Diferenciales />
       <Testimonials />
       <FAQ />
-      <Newsletter />
     </motion.div>
   )
 }

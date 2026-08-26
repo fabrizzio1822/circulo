@@ -26,7 +26,7 @@ export default function Banner() {
       className="bg-violeta text-white relative overflow-hidden"
     >
       <div className="lg:mx-[50px] mx-auto px-6 lg:px-12  lg:pb-32">
-        <div className="grid lg:grid-cols-[1fr_600px] gap-12 lg:gap-16 items-start">
+        <div className="grid lg:grid-cols-[1.2fr_1fr] xl:grid-cols-[1.4fr_1fr] gap-12 lg:gap-16 items-start">
           {/* Columna texto */}
           <div className="relative z-10 pt-16  lg:pt-24">
 
@@ -34,18 +34,18 @@ export default function Banner() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2, ease }}
-              className="font-serif text-6xl md:text-7xl lg:text-8xl leading-[1.02] mb-8 font-normal tracking-tight"
+              className="font-serif text-[clamp(3.2rem,min(8.5vw,8.5vh),6.5rem)] leading-[1.02] mb-8 font-normal tracking-tight"
             >
-              Cuidamos tu
+              Expertos en terapia
               <br />
-              <em className="italic font-bold">bienestar emocional</em>
+              <em className="italic font-bold">de familia y pareja</em>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.9, delay: 0.4, ease }}
-              className="text-white text-lg lg:text-xl leading-relaxed max-w-lg mb-10"
+              className="text-white text-[clamp(1rem,min(2vw,2vh),1.25rem)] leading-relaxed max-w-[min(100%,32rem)] mb-10"
             >
               Somos un equipo de psicólogos y terapeutas sistémicos.
               Acompañamos a personas, parejas y familias desde hace más de 15
@@ -60,14 +60,14 @@ export default function Banner() {
             >
               <Link
                 href="https://wa.me/543885737111"
-                className="inline-flex items-center gap-2 bg-white text-violeta px-8 lg:px-10 py-4 lg:py-5 rounded-full text-base lg:text-lg font-medium hover:bg-white/90 transition"
+                className="inline-flex items-center gap-2 bg-white text-violeta px-[clamp(1.5rem,min(3vw,3vh),2.5rem)] py-[clamp(0.75rem,min(1.5vw,1.5vh),1.25rem)] rounded-full text-[clamp(0.875rem,min(1.5vw,1.5vh),1.125rem)] font-medium hover:bg-white/90 transition"
               >
                 Reservá una consulta
                 <ArrowRight className="w-5 h-5" />
               </Link>
               <Link
                 href="/servicios"
-                className="inline-flex items-center gap-2 border border-white/25 text-white px-8 lg:px-10 py-4 lg:py-5 rounded-full text-base lg:text-lg font-medium hover:bg-white/10 transition"
+                className="inline-flex items-center gap-2 border border-white/25 text-white px-[clamp(1.5rem,min(3vw,3vh),2.5rem)] py-[clamp(0.75rem,min(1.5vw,1.5vh),1.25rem)] rounded-full text-[clamp(0.875rem,min(1.5vw,1.5vh),1.125rem)] font-medium hover:bg-white/10 transition"
               >
                 Ver Servicios
               </Link>
@@ -91,7 +91,7 @@ export default function Banner() {
               className="flex gap-4 px-6 w-max"
             >
               {[1, 2, 3, 1, 2].map((_, i) => (
-                <div key={`mobile-col-${i}`} className="relative w-[60vw] sm:w-[50vw] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shrink-0">
+                <div key={`mobile-col-${i}`} className="relative w-[min(60vw,50vh)] sm:w-[min(50vw,60vh)] aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl shrink-0">
                   <Image
                     src={`/assets/hero-${(i % 3) + 1}.jpg`}
                     alt="Círculo Sistémico"
@@ -106,7 +106,7 @@ export default function Banner() {
 
           {/* Desktop: Grid Parallax */}
           <div
-            className="hidden lg:block relative h-[700px] w-full overflow-hidden"
+            className="hidden lg:block relative h-[clamp(400px,75vh,700px)] w-full overflow-hidden"
             style={{
               maskImage: "linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)",
               WebkitMaskImage: "linear-gradient(to bottom, transparent, black 15%, black 85%, transparent)"

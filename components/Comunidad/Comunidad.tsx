@@ -17,7 +17,7 @@ export default function Comunidad() {
             {/* Imagen derecha (pareja) */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[55%] h-[80%] rounded-[2rem] overflow-hidden shadow-lg z-0">
               <Image
-                src="/assets/sobre-nosotros.webp"
+                src="/assets/img-3.jpg"
                 alt="Personas abrazándose"
                 fill
                 className="object-cover"
@@ -26,7 +26,7 @@ export default function Comunidad() {
             {/* Imagen superior izquierda */}
             <div className="absolute left-0 top-[5%] w-[45%] h-[50%] rounded-[2rem] overflow-hidden shadow-lg z-10">
               <Image
-                src="/assets/hero-1.jpg"
+                src="/assets/img-4.jpg"
                 alt="Mujer sonriendo"
                 fill
                 className="object-cover"
@@ -35,7 +35,7 @@ export default function Comunidad() {
             {/* Imagen inferior izquierda */}
             <div className="absolute left-[12%] bottom-[5%] w-[42%] h-[45%] rounded-[2rem] overflow-hidden shadow-xl z-20">
               <Image
-                src="/assets/hero-2.jpg"
+                src="/assets/img-5.jpg"
                 alt="Mujer con anteojos"
                 fill
                 className="object-cover"

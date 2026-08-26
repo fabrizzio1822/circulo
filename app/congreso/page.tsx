@@ -7,7 +7,7 @@ import Link from "next/link";
 import FixedWhatsappButton from "@/components/Whatsapp/Whatsapp";
 const stats = [
     { valor: "2 días", label: "de encuentro" },
-    { valor: "6", label: "disertantes principales" },
+    { valor: "15", label: "disertantes principales" },
     { valor: "8", label: "ejes temáticos" },
     { valor: "Cabildo", label: "histórico de jujuy" },
 ];
