@@ -289,12 +289,10 @@ export default function SobreNosotros() {
             <span className="w-1.5 h-1.5 rounded-full bg-turquesa mt-2 shrink-0"></span>
             <span className='text-md'>Sobre Círculo Sistémico</span>
           </div>
-
           <div className="space-y-6">
             <ScrollRevealText>
               Somos un equipo de psicólogos y terapeutas sistémicos. Desde hace más de 15 años acompañamos a personas, parejas y familias, combinando formación clínica rigurosa con una mirada cálida y cercana. Trabajamos desde el modelo sistémico, ofreciendo un espacio de escucha, contención y crecimiento, tanto en terapia individual como de pareja y familiar.
             </ScrollRevealText>
-
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-0 border-t border-black/10 pt-8">
               {stats.map((stat, idx) => (
                 <div
@@ -306,12 +304,10 @@ export default function SobreNosotros() {
                 </div>
               ))}
             </div>
-
-            {/* Logos de instituciones */}
             <div className="pt-8 md:pt-12">
               <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
                 <img src="/assets/Fundaif.png" alt="Fundaif" className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mix-blend-multiply" />
-                <img src="/assets/colegio1-photoroom.png" alt="Colegio" className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mix-blend-multiply" />
+                <img src="/assets/colegio1-Photoroom.png" alt="Colegio" className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mix-blend-multiply" />
                 <img src="/assets/colegio2.png" alt="Colegio" className="h-12 md:h-16 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300 mix-blend-multiply" />
               </div>
             </div>
