@@ -9,6 +9,13 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  outputFileTracingExcludes: {
+    '*': [
+      'public/assets/**/*',
+      'public/assets/CONGRESO DÍA 1/**/*',
+      'public/assets/CONGRESO DÍA 2/**/*'
+    ],
+  },
 };
 
 export default nextConfig;
