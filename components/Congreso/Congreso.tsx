@@ -171,14 +171,14 @@ export default function HeroCongreso({
     titleLine1 = "Congreso Sistémico",
     titleLine2 = "del Norte",
     description = "Un espacio de estudio, actualización e intercambio sobre el trabajo sistémico relacional con familias, parejas y grupos. El primer encuentro de su tipo en el Noroeste Argentino.",
-    primaryCtaLabel = "Inscribirme al congreso",
+    primaryCtaLabel = "Explora lo que nos dejó",
     secondaryCtaLabel = "Conocer más",
     stats = defaultStats,
     onPrimaryCtaClick,
     onSecondaryCtaClick,
     countdownTarget,
     countdownLabel = "Comienza en",
-    countdownDoneMessage = "¡Ya comenzó!",
+    countdownDoneMessage = "¡Evento terminado!",
 }: HeroCongresoProps) {
     const [mounted, setMounted] = useState(false);
 
@@ -252,17 +252,10 @@ export default function HeroCongreso({
                     {/* CTAs */}
                     <div className="mt-9 flex flex-wrap items-center gap-4">
                         <a
-                            href="https://forms.gle/QrAKRng2HYQf8J7j7"
+                            href="/congreso"
                             className="rounded-full bg-sky-300 px-6 py-3 text-sm font-semibold text-[#0c1030] transition-colors hover:bg-sky-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-300"
                         >
                             {primaryCtaLabel}
-                        </a>
-                        <a
-
-                            href="/congreso"
-                            className="rounded-full border border-white/40 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-                        >
-                            {secondaryCtaLabel}
                         </a>
                     </div>
 

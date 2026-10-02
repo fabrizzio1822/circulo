@@ -104,11 +104,11 @@ function Separator() {
 }
 
 export default function AnnouncementBar({
-    eyebrow = 'Inscripciones abiertas',
+    eyebrow = 'Evento finalizado',
     title = 'Congreso Sistémico del Norte',
     targetDate = new Date(2026, 8, 18, 0, 0, 0),
-    ctaLabel = 'VER MÁS INFORMACIÓN',
-    ctaHref = '#',
+    ctaLabel = 'REVIVIR EL EVENTO',
+    ctaHref = '/congreso',
     backgroundImageSrc = '/assets/congreso-sistemico.png',
     appearDelay = 800,
 }: AnnouncementBarProps) {
@@ -176,33 +176,6 @@ export default function AnnouncementBar({
 
                     {/* Countdown + CTA */}
                     <div className="flex items-center gap-2.5 sm:gap-4">
-                        {!isOver ? (
-                            <div className="flex items-center gap-1 sm:gap-1.5">
-                                <CountdownUnit
-                                    value={timeLeft.days}
-                                    label="Días"
-                                />
-
-                                <Separator />
-
-                                <CountdownUnit
-                                    value={timeLeft.hours}
-                                    label="Hrs"
-                                />
-
-                                <Separator />
-
-                                <CountdownUnit
-                                    value={timeLeft.minutes}
-                                    label="Min"
-                                />
-                            </div>
-                        ) : (
-                            <span className="text-xs font-medium text-[#F5F1E8]">
-                                Inscripciones cerradas
-                            </span>
-                        )}
-
                         <motion.a
                             href="/congreso"
                             whileHover={{ scale: 1.04 }}
